@@ -8,10 +8,16 @@ describe('Rps', () => {
         expect(rps.check(null)).to.eql('Hey come on, be serious, give me a choice!')
     })
 
-    it('calculates the winner of the game', () => {
-        let choice1 = 'rock';
-        let choice2 = 'scissors';
-        expect(rps.check(choice1, choice2)).to.equal('rock wins')
+    it('expects Player 1 to win the game', () => {
+        expect(rps.check('rock', 'scissors')).to.equal('rock wins')
+    })
+
+    it('expects Player 1 to win the game', () => {
+        expect(rps.check('scissors', 'paper')).to.equal('scissors wins')
+    })
+
+    it('expects Player 1 to win the game', () => {
+        expect(rps.check('paper', 'rock')).to.equal('paper wins')
     })
 
     it('calculates when a game is a rock tie', () => {
