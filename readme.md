@@ -36,21 +36,21 @@ From the player's point of view, the computer makes its choice at the same time 
 
 ### **User Stories**
 -------
-#### The "Rock, Paper, Scissors" (RPC) program will work with the following associated user stories.
+#### The "Rock, Paper, Scissors" (RPS) program will work with the following associated user stories.
 
 * **1:** 
 
   ```
     As a user
     In order to have fun
-    I would like to be able to initiate a game of RPC
+    I would like to be able to initiate a game of RPS
   ```
 
 * **2:** 
 
   ```
     As a user
-    In order to play RPC
+    In order to play RPS
     I would like to be able to input my choice
   ```
 
