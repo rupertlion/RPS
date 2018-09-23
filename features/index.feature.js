@@ -4,6 +4,7 @@ const browser = new BrowserHelpers()
 const mockMath = Object.create(global.Math);
 mockMath.random = () => 0.5;
 global.Math = mockMath;
+computerchoice = Math.random();
 
 describe('User can input a value and get Rock Paper Scissors results', () => {
     before(async () => {
