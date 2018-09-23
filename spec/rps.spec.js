@@ -7,10 +7,14 @@ describe('Rps', () => {
     
     let rps = new Rps
 
-    describe('Input required', () => {
+    describe('Correct input required', () => {
         it('returns an error if no choice is made', () => {
             expect(rps.check(null)).to.eql('Hey come on, be serious, give me a choice!')
         })
+        it('returns an error if wrong choice is made', () => {
+            expect(rps.check('panda')).to.eql('Hey come on, be serious, give me a choice!')
+        })
+    
     })
 
     describe('Player 1 wins', () => {
@@ -25,7 +29,6 @@ describe('Rps', () => {
         it('expects Player 1 to win the game', () => {
             expect(rps.check('paper', 'rock')).to.equal('You win! The computer chose rock')
         })
-
     })
 
     describe('Computer wins', () => {
@@ -40,7 +43,6 @@ describe('Rps', () => {
         it('expects Computer to win the game', () => {
             expect(rps.check('paper', 'scissors')).to.equal('Computer wins! The computer chose scissors')
         })
-
     })
 
     describe('Game is tied', () => {
@@ -55,7 +57,6 @@ describe('Rps', () => {
         it('calculates when a game is a scissors tie', () => {
             expect(rps.check('scissors', 'scissors')).to.equal("It's a tie! You both chose scissors")
         })
-
     })
     
     describe('Computer player random generation', () => {

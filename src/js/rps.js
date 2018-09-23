@@ -15,6 +15,10 @@ function Rps() {
             return 'Hey come on, be serious, give me a choice!';
         }
 
+        if (!((choice1 == 'rock') || (choice1 == 'paper') || (choice1 == 'scissors'))) {
+            return 'Hey come on, be serious, give me a choice!';
+        }
+
         if (choice1 === choice2) {
             return `It's a tie! You both chose ${choice1}`;
         }
