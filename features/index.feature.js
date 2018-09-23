@@ -23,7 +23,7 @@ describe('User can input a value and get Rock Paper Scissors results', () => {
         await browser.fillIn("input[id='value']", { with:  "rock" })
         await browser.clickOnButton("input[value='Check']")
         let content = await browser.getContent("[id='display_answer']")
-        expect(content).to.eql('You lose!');
+        expect(content).to.eql('Computer wins!');
     })
 
     it('clicking on the "Play" button', async () => {
