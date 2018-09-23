@@ -1,5 +1,7 @@
 function Rps()  {
-    this.check = (number) => {
-        return number
+    this.check = (input) => {
+        if (!input) {
+            return 'Hey come on, be serious, give me a choice!';
+        }
     }
 }
