@@ -14,10 +14,16 @@ describe('Rps', () => {
         expect(rps.check(choice1, choice2)).to.equal('rock wins')
     })
 
-    it('calculates when a game is a tie', () => {
-        let choice1 = 'rock';
-        let choice2 = 'rock';
-        expect(rps.check(choice1, choice2)).to.equal('The result is a tie! Try again.')
+    it('calculates when a game is a rock tie', () => {
+        expect(rps.check('rock', 'rock')).to.equal('The result is a tie! Try again.')
+    })
+
+    it('calculates when a game is a paper tie', () => {
+        expect(rps.check('paper', 'paper')).to.equal('The result is a tie! Try again.')
+    })
+
+    it('calculates when a game is a scissors tie', () => {
+        expect(rps.check('scissors', 'scissors')).to.equal('The result is a tie! Try again.')
     })
 
     it('creates a random choice for the computer', () => {
