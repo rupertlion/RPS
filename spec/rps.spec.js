@@ -21,8 +21,8 @@ describe('Rps', () => {
     })
 
     it('creates a random choice for the computer', () => {
-        let computerchoice = 0.1;
-        expect(rps.check(choice2)).to.equal('rock')
+        computerchoice = 0.1;
+        expect(choice2).to.equal('rock')
     })
 
 })
