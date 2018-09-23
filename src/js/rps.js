@@ -16,30 +16,30 @@ function Rps() {
         }
 
         if (choice1 === choice2) {
-            return "It's a tie!";
+            return `It's a tie! You both chose ${choice1}`;
         }
         
         if (choice1 === "rock") {
             if (choice2 === "scissors") {
-                return "You win!";
+                return `You win! The computer chose ${choice2}`;
             } else { 
-                return "Computer wins!";
+                return `Computer wins! The computer chose ${choice2}`;
             }
         }
         
         if (choice1 === "paper") {
             if (choice2 === "rock") {
-                return "You win!";
+                return `You win! The computer chose ${choice2}`;
             } else { 
-                return "Computer wins!";
+                return `Computer wins! The computer chose ${choice2}`;
             }
         }
         
         if (choice1 === "scissors") {
             if (choice2 === "paper") {
-                return "You win!";
+                return `You win! The computer chose ${choice2}`;
             } else { 
-                return "Computer wins!";
+                return `Computer wins! The computer chose ${choice2}`;
             }
         }   
     }

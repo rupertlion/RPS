@@ -15,45 +15,45 @@ describe('Rps', () => {
 
     describe('Player 1 wins', () => {
         it('expects Player 1 to win the game', () => {
-            expect(rps.check('rock', 'scissors')).to.equal('You win!')
+            expect(rps.check('rock', 'scissors')).to.equal('You win! The computer chose scissors')
         })
 
         it('expects Player 1 to win the game', () => {
-            expect(rps.check('scissors', 'paper')).to.equal('You win!')
+            expect(rps.check('scissors', 'paper')).to.equal('You win! The computer chose paper')
         })
 
         it('expects Player 1 to win the game', () => {
-            expect(rps.check('paper', 'rock')).to.equal('You win!')
+            expect(rps.check('paper', 'rock')).to.equal('You win! The computer chose rock')
         })
 
     })
 
     describe('Computer wins', () => {
         it('expects Computer to win the game', () => {
-            expect(rps.check('rock', 'paper')).to.equal('Computer wins!')
+            expect(rps.check('rock', 'paper')).to.equal('Computer wins! The computer chose paper')
         })
 
         it('expects Computer to win the game', () => {
-            expect(rps.check('scissors', 'rock')).to.equal('Computer wins!')
+            expect(rps.check('scissors', 'rock')).to.equal('Computer wins! The computer chose rock')
         })
 
         it('expects Computer to win the game', () => {
-            expect(rps.check('paper', 'scissors')).to.equal('Computer wins!')
+            expect(rps.check('paper', 'scissors')).to.equal('Computer wins! The computer chose scissors')
         })
 
     })
 
     describe('Game is tied', () => {
         it('calculates when a game is a rock tie', () => {
-            expect(rps.check('rock', 'rock')).to.equal("It's a tie!")
+            expect(rps.check('rock', 'rock')).to.equal("It's a tie! You both chose rock")
         })
 
         it('calculates when a game is a paper tie', () => {
-            expect(rps.check('paper', 'paper')).to.equal("It's a tie!")
+            expect(rps.check('paper', 'paper')).to.equal("It's a tie! You both chose paper")
         })
 
         it('calculates when a game is a scissors tie', () => {
-            expect(rps.check('scissors', 'scissors')).to.equal("It's a tie!")
+            expect(rps.check('scissors', 'scissors')).to.equal("It's a tie! You both chose scissors")
         })
 
     })
