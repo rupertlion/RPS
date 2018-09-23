@@ -20,6 +20,18 @@ describe('Rps', () => {
         expect(rps.check('paper', 'rock')).to.equal('paper wins')
     })
 
+    it('expects Player 2 to win the game', () => {
+        expect(rps.check('rock', 'paper')).to.equal('paper wins')
+    })
+
+    it('expects Player 2 to win the game', () => {
+        expect(rps.check('scissors', 'rock')).to.equal('rock wins')
+    })
+
+    it('expects Player 2 to win the game', () => {
+        expect(rps.check('paper', 'scissors')).to.equal('scissors wins')
+    })
+
     it('calculates when a game is a rock tie', () => {
         expect(rps.check('rock', 'rock')).to.equal('The result is a tie! Try again.')
     })
