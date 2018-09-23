@@ -20,4 +20,9 @@ describe('Rps', () => {
         expect(rps.check(choice1, choice2)).to.equal('The result is a tie! Try again.')
     })
 
+    it('creates a random choice for the computer', () => {
+        let computerchoice = 0.1;
+        expect(rps.check(choice2)).to.equal('rock')
+    })
+
 })
