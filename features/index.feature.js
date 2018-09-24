@@ -1,9 +1,6 @@
 const { Rps } = require('../spec/spec.helper')
 const BrowserHelpers = require('e2e_training_wheels')
 const browser = new BrowserHelpers()
-const mockMath = Object.create(global.Math);
-mockMath.random = () => 0.5;
-global.Math = mockMath;
 
 describe('User can input a value and get Rock Paper Scissors results', () => {
     before(async () => {
