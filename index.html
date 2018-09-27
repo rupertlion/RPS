@@ -18,11 +18,11 @@
     
     <div class="w-full text-center bg-white rounded shadow-lg p-8 md:max-w-sm md:mx-auto">
         <div class="flex flex-col mb-4 md:w-full">    
-            <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="value">rock, paper or scissors?</label>
+            <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="value">Rock, Paper or Scissors?</label>
             <select class="border text-center py-2 px-3 text-grey-darkest" name="value" id="value">
-                <option value="rock">rock</option>
-                <option value="paper">paper</option>
-                <option value="scissors">scissors</option>
+                <option value="Rock">Rock</option>
+                <option value="Paper">Paper</option>
+                <option value="Scissors">Scissors</option>
             </select>
         </div>   
         <div class="flex flex-col mb-4 md:w-full">   
@@ -43,7 +43,7 @@
         button.addEventListener('click', () =>{
             let value = document.getElementById('value').value
             let rps = new Rps
-            let result = rps.check(value, choice2)
+            let result = rps.check(value, computerchoice)
             displayDiv.innerHTML = result;
         })
     })

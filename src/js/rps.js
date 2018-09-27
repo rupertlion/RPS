@@ -1,49 +1,43 @@
 function Rps() {
     
-    let computerchoice = Math.random();
+    const computerchoice = ['Rock', 'Paper', 'Scissors'];
+    computerchoice[Math.floor(Math.random() * computerchoice.length)];
     
-    if (computerchoice < 0.34) {
-            choice2 = "rock";
-        } else if(computerchoice <= 0.67) {
-            choice2 = "paper";
-        } else {
-            choice2 = "scissors";
-        }
-    
-    this.check = (choice1, choice2) => {
+    this.check = (choice1, computerchoice) => {
+        
         if (!choice1) {
             return 'Hey come on, be serious, give me a choice!';
         }
 
-        if (!((choice1 == 'rock') || (choice1 == 'paper') || (choice1 == 'scissors'))) {
+        if (!((choice1 == 'Rock') || (choice1 == 'Paper') || (choice1 == 'Scissors'))) {
             return 'Hey come on, be serious, give me a choice!';
         }
 
-        if (choice1 === choice2) {
+        if (choice1 === computerchoice) {
             return `It's a tie! You both chose ${choice1}`;
         }
         
-        if (choice1 === "rock") {
-            if (choice2 === "scissors") {
-                return `You win! The computer chose ${choice2}`;
+        if (choice1 === "Rock") {
+            if (computerchoice === "Scissors") {
+                return `You win! The computer chose ${computerchoice}`;
             } else { 
-                return `Computer wins! The computer chose ${choice2}`;
+                return `Computer wins! The computer chose ${computerchoice}`;
             }
         }
         
-        if (choice1 === "paper") {
-            if (choice2 === "rock") {
-                return `You win! The computer chose ${choice2}`;
+        if (choice1 === "Paper") {
+            if (computerchoice === "Rock") {
+                return `You win! The computer chose ${computerchoice}`;
             } else { 
-                return `Computer wins! The computer chose ${choice2}`;
+                return `Computer wins! The computer chose ${computerchoice}`;
             }
         }
         
-        if (choice1 === "scissors") {
-            if (choice2 === "paper") {
-                return `You win! The computer chose ${choice2}`;
+        if (choice1 === "Scissors") {
+            if (computerchoice === "Paper") {
+                return `You win! The computer chose ${computerchoice}`;
             } else { 
-                return `Computer wins! The computer chose ${choice2}`;
+                return `Computer wins! The computer chose ${computerchoice}`;
             }
         }   
     }
