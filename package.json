@@ -14,5 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "e2e_training_wheels": "0.0.15"
+  },
+  "dependencies": {
+    "sinon": "^6.3.5"
   }
 }
