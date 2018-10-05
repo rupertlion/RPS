@@ -1,5 +1,4 @@
-function Rps() {
-    
+function Randonmise() {
     let computerchoice = Math.random();
     
     if (computerchoice < 0.34) {
@@ -9,7 +8,10 @@ function Rps() {
         } else {
             choice2 = "scissors";
         }
-    
+}
+
+function Rps() {
+        
     this.check = (choice1, choice2) => {
         if (!choice1) {
             return 'Hey come on, be serious, give me a choice!';
