@@ -12,7 +12,9 @@ function Randomise() {
 
 function Rps() {
         
-    this.check = (choice1, choice2) => {
+    let randomise = new Randomise
+
+    this.check = (choice1, randomise) => {
         if (!choice1) {
             return 'Hey come on, be serious, give me a choice!';
         }
@@ -21,31 +23,31 @@ function Rps() {
             return 'Hey come on, be serious, give me a choice!';
         }
 
-        if (choice1 === choice2) {
+        if (choice1 === randomise) {
             return `It's a tie! You both chose ${choice1}`;
         }
         
         if (choice1 === "rock") {
-            if (choice2 === "scissors") {
-                return `You win! The computer chose ${choice2}`;
+            if (randomise === "scissors") {
+                return `You win! The computer chose ${randomise}`;
             } else { 
-                return `Computer wins! The computer chose ${choice2}`;
+                return `Computer wins! The computer chose ${randomise }`;
             }
         }
         
         if (choice1 === "paper") {
-            if (choice2 === "rock") {
-                return `You win! The computer chose ${choice2}`;
+            if (randomise === "rock") {
+                return `You win! The computer chose ${randomise}`;
             } else { 
-                return `Computer wins! The computer chose ${choice2}`;
+                return `Computer wins! The computer chose ${randomise}`;
             }
         }
         
         if (choice1 === "scissors") {
-            if (choice2 === "paper") {
-                return `You win! The computer chose ${choice2}`;
+            if (randomise === "paper") {
+                return `You win! The computer chose ${randomise}`;
             } else { 
-                return `Computer wins! The computer chose ${choice2}`;
+                return `Computer wins! The computer chose ${randomise}`;
             }
         }   
     }
