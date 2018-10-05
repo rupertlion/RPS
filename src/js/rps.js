@@ -1,4 +1,4 @@
-function Randonmise() {
+function Randomise() {
     let computerchoice = Math.random();
     
     if (computerchoice < 0.34) {
