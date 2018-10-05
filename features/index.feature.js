@@ -1,6 +1,9 @@
 const { Rps } = require('../spec/spec.helper')
 const BrowserHelpers = require('e2e_training_wheels')
 const browser = new BrowserHelpers()
+const sinon = require('sinon');
+const callback = sinon.fake.returns(0.5)
+const proxy = computerchoice(callback)
 
 describe('User can input a value and get Rock Paper Scissors results', () => {
     before(async () => {
