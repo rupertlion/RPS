@@ -1,5 +1,4 @@
 const { Rps } = require('../spec/spec.helper')
-const { Randomise } = require('../spec/spec.helper')
 const BrowserHelpers = require('e2e_training_wheels')
 const browser = new BrowserHelpers()
 
