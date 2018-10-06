@@ -1,6 +1,6 @@
 const { Rps } =  require('./spec.helper')
 const mockMath = Object.create(global.Math);
-mockMath.random = () => 0.5;
+mockMath.random = () => 'paper';
 global.Math = mockMath;
 
 describe('Rps', () => {
@@ -61,8 +61,7 @@ describe('Rps', () => {
     
     describe('Computer player random generation', () => {
         it('creates a random choice for the computer', () => {
-            choice2 = ["rock", "paper", "scissors"];
-            choice2[Math.floor(Math.random() * choice2.length)];
+            computerchoice = ["rock", "paper", "scissors"];
             expect(choice2).to.equal('paper')
         })
     })

@@ -1,8 +1,8 @@
 function Randomise() {
     // let computerchoice = Math.random();
     
-    choice2 = ["rock", "paper", "scissors"];
-    choice2[Math.floor(Math.random() * choice2.length)]
+    let computerchoice = ["rock", "paper", "scissors"];
+    choice2 = computerchoice[Math.floor(Math.random() * computerchoice.length)]
 
     // if (computerchoice < 0.34) {
     //         choice2 = "rock";
