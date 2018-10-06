@@ -1,6 +1,6 @@
 const { Rps } =  require('./spec.helper')
 const mockMath = Object.create(global.Math);
-mockMath.random = () => 'paper';
+mockMath.random = () => 0.5;
 global.Math = mockMath;
 
 describe('Rps', () => {

@@ -1,16 +1,16 @@
 function Randomise() {
-    // let computerchoice = Math.random();
+    let computerchoice = Math.random();
     
-    let computerchoice = ["rock", "paper", "scissors"];
-    choice2 = computerchoice[Math.floor(Math.random() * computerchoice.length)]
+    // let computerchoice = ["rock", "paper", "scissors"];
+    // choice2 = computerchoice[Math.floor(Math.random() * computerchoice.length)]
 
-    // if (computerchoice < 0.34) {
-    //         choice2 = "rock";
-    //     } else if(computerchoice <= 0.67) {
-    //         choice2 = "paper";
-    //     } else {
-    //         choice2 = "scissors";
-    //     }
+    if (computerchoice < 0.34) {
+            choice2 = "rock";
+        } else if(computerchoice <= 0.67) {
+            choice2 = "paper";
+        } else {
+            choice2 = "scissors";
+        }
 }
 
 function Rps() {
