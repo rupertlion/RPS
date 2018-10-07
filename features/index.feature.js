@@ -22,8 +22,8 @@ describe('User can input a value and get Rock Paper Scissors results', () => {
 
     it('clicking on the "Check" button', async () => {
         let sinon = require('sinon')
-        let fake = sinon.fake.returns('paper');
-        sinon.replace(rps, randomise, fake);
+        let fake = sinon.fake.returns(0.5);
+        sinon.replace(Math, 'random', fake);
         await browser.selectOption("select[id='value']", { option:  "rock" })
         await browser.clickOnButton("input[value='Check']")
         let content = await browser.getContent("[id='display_answer']")
