@@ -1,6 +1,6 @@
 function Randomise() {
     let computerchoice = Math.random();
-    
+    debugger
     // let computerchoice = ["rock", "paper", "scissors"];
     // choice2 = computerchoice[Math.floor(Math.random() * computerchoice.length)]
 
