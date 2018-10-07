@@ -9,8 +9,11 @@ describe('User can input a value and get Rock Paper Scissors results', () => {
     
     before(async () => {
         await  browser.init()
-        await  browser.visitPage('http://localhost:8080/')
-    });
+        await  browser.visitPage('http://localhost:8080/');
+        let sinon = require('sinon')
+        let fake = sinon.fake.returns(0.5);
+        sinon.replace(Math, 'random', fake);
+    })
 
     beforeEach(async () => {
         await  browser.page.reload();
@@ -21,9 +24,6 @@ describe('User can input a value and get Rock Paper Scissors results', () => {
     })
 
     it('clicking on the "Check" button', async () => {
-        let sinon = require('sinon')
-        let fake = sinon.fake.returns(0.5);
-        sinon.replace(Math, 'random', fake);
         await browser.selectOption("select[id='value']", { option:  "rock" })
         await browser.clickOnButton("input[value='Check']")
         let content = await browser.getContent("[id='display_answer']")
@@ -31,9 +31,6 @@ describe('User can input a value and get Rock Paper Scissors results', () => {
     })
 
     it('clicking on the "Check" button', async () => {
-        let sinon = require('sinon')
-        let fake = sinon.fake.returns(0.5);
-        sinon.replace(Math, 'random', fake);
         await browser.selectOption("select[id='value']", { option:  "paper" })
         await browser.clickOnButton("input[value='Check']")
         let content = await browser.getContent("[id='display_answer']")
@@ -41,9 +38,6 @@ describe('User can input a value and get Rock Paper Scissors results', () => {
     })
 
     it('clicking on the "Check" button', async () => {
-        let sinon = require('sinon')
-        let fake = sinon.fake.returns(0.5);
-        sinon.replace(Math, 'random', fake);
         await browser.selectOption("select[id='value']", { option:  "scissors" })
         await browser.clickOnButton("input[value='Check']")
         let content = await browser.getContent("[id='display_answer']")
