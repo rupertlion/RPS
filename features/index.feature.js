@@ -2,6 +2,8 @@ const { Rps } = require('../spec/spec.helper')
 const { Randomise } = require('../spec/spec.helper')
 const BrowserHelpers = require('e2e_training_wheels')
 const browser = new BrowserHelpers()
+const randomise = new Randomise
+const rps = new Rps
 
 describe('User can input a value and get Rock Paper Scissors results', () => {
     
@@ -21,7 +23,7 @@ describe('User can input a value and get Rock Paper Scissors results', () => {
     it('clicking on the "Check" button', async () => {
         let sinon = require('sinon')
         let fake = sinon.fake.returns('paper');
-        sinon.replace(this, randomise, fake);
+        sinon.replace(rps, randomise, fake);
         await browser.selectOption("select[id='value']", { option:  "rock" })
         await browser.clickOnButton("input[value='Check']")
         let content = await browser.getContent("[id='display_answer']")
