@@ -2,9 +2,7 @@ const { Rps } = require('../spec/spec.helper')
 const { Randomise } = require('../spec/spec.helper')
 const BrowserHelpers = require('e2e_training_wheels')
 const browser = new BrowserHelpers()
-let sinon = require('sinon')
-let fake = sinon.fake.returns(0.5);
-sinon.replace(Math, 'random', fake);
+const sinon = require('sinon')
 
 describe('User can input a value and get Rock Paper Scissors results', () => {
     
@@ -15,10 +13,17 @@ describe('User can input a value and get Rock Paper Scissors results', () => {
 
     beforeEach(async () => {
         await  browser.page.reload();
+        randomiseMock = sinon.mock(new Randomise());
+        global.randomise = randomiseMock;
+        rps = new Rps();
     })
 
     after(async ()=> {
         await  browser.close();
+    })
+
+    afterEach(async ()=> {
+        delete global.randomise;
     })
 
     it('choosing rock and clicking "Check" button', async () => {
