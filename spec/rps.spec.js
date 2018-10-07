@@ -61,7 +61,7 @@ describe('Rps', () => {
     
     describe('Computer player random generation', () => {
         it('creates a random choice for the computer', () => {
-            computerchoice = Math.random();
+            computerchoice = ["rock", "paper", "scissors"];
             expect(choice2).to.equal('paper')
         })
     })
